@@ -11,11 +11,11 @@ describe('Ship constructor', () => {
   });
 });
 
-describe('setSailFrom', () => {
-  it('test method setSailFrom', () => {
+describe('setSail', () => {
+  it('can set sail', () => {
     const ship = new Ship('Dover');
-    ship.setSailFrom('London');
-    expect(ship.startingPort).toEqual('London');
+    ship.setSail();     // set ship.startingPort to undefined
+    expect(ship.startingPort).toBeFalsy();
   });
 });
 
