@@ -4,10 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidCheungTW/cruise-ships.git"
   },
   "author": "David Cheung",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidCheungTW/cruise-ships/issues"
+  },
+  "homepage": "https://github.com/DavidCheungTW/cruise-ships#readme",
   "devDependencies": {
     "jest": "^29.3.1"
   }
