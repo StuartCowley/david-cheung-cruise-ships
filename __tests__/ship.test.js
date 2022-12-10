@@ -1,24 +1,26 @@
 const Ship = require('../src/ship');
 
-describe('constructor', () => {
-  it('returns an object', () => {
+describe('Ship constructor', () => {
+  it('can be instantiated', () => {
     expect(new Ship()).toBeInstanceOf(Object);
+  });
+  
+  it('has a starting port', () => {
+    const ship = new Ship('Dover');
+    expect(ship.startingPort).toBe('Dover');
   });
 });
 
+
 describe('getPassengers', () => {
-  it('test method getPassengers', () => {
-    const ship = new Ship();
+  xit('test method getPassengers', () => {
+    const ship = new Ship('Dover');
     ship.passengers = ['David','Stella'];
     expect(ship.getPassengers()).toEqual(['David','Stella']);
   });
 });
 
-describe('setStartingPort', () => {
-  it('test method setStartingPort', () => {
-    const ship = new Ship();
-    ship.setStartingPort('Hong Kong');
-    expect(ship.startingPort).toEqual('Hong Kong');
-  });
-});
+
+
+
 
