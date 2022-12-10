@@ -1,14 +1,16 @@
-function Ship(port){
-  this.startingPort = port;
+function Ship(portObj){
+  // this.startingPort = port;
+  this.currentPort = portObj;
   this.passengers = [];
 }
 
-Ship.prototype.setSail = function(port) {
-  this.startingPort = port;
+Ship.prototype.setSail = function(portObj) {
+   //this.startingPort = portObj;
+   this.currentPort = portObj; 
 };
 
-Ship.prototype.getPassengers = function() {
-  return this.passengers;
+Ship.prototype.dock = function(portObj) {
+  this.currentPort = portObj;
 };
 
 module.exports = Ship;
