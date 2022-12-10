@@ -11,15 +11,21 @@ describe('Ship constructor', () => {
   });
 });
 
+describe('setSailFrom', () => {
+  it('test method setSailFrom', () => {
+    const ship = new Ship('Dover');
+    ship.setSailFrom('London');
+    expect(ship.startingPort).toEqual('London');
+  });
+});
 
 describe('getPassengers', () => {
-  xit('test method getPassengers', () => {
+  it('test method getPassengers', () => {
     const ship = new Ship('Dover');
     ship.passengers = ['David','Stella'];
     expect(ship.getPassengers()).toEqual(['David','Stella']);
   });
 });
-
 
 
 
