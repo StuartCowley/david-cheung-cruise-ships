@@ -22,6 +22,17 @@ describe('Ship constructor', () => {
     // expect(ship.startingPort).toBe('Dover');
     expect(ship.currentPort).toBe(port);
   });
+
+// gets added to port on instantiation in the Ship test suite.
+// check ship.currentPort.ships to see if it contains your Ship instance.
+// using this.currentPort.addShip() with this
+  it('gets added to port on instantiation', () => {
+    const dover = new Port('Dover');
+    const itinerary = new Itinerary([dover]);
+    const ship = new Ship(itinerary);
+    expect(dover.ships).toContain(ship);
+  });
+
 });
 
 // Ship argument change from string to object
@@ -29,7 +40,6 @@ describe('Ship constructor', () => {
 // setSail change startingPort to currentPort
 // setSail change previousPort = currentPort to data from Itinerary
 describe('setSail', () => {
-
 
 // add another port to test setSail
   it('can set sail',() => {
@@ -41,6 +51,9 @@ describe('setSail', () => {
     ship.setSail();
 
     expect(ship.currentPort).toBeFalsy();
+
+    // check ship's previous currentPort not in Port.ships list
+    expect(dover.ships).not.toContain(ship);
   });
 
   it('can\'t sail further than its itinerary', () => {
@@ -71,6 +84,10 @@ describe('dock', () => {
     ship.dock();
 
     expect(ship.currentPort).toBe(calais);
+
+    // test ship.currentPort.ships contain this instance
+    expect(calais.ships).toContain(ship);
+
   });
 });
 
