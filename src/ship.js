@@ -19,7 +19,6 @@ class Ship {
     }
   
      this.previousPort = this.currentPort;
-  
      this.currentPort = null;
   
     // ship updated here, so do removeShip from port at end of method
@@ -38,6 +37,7 @@ class Ship {
   
     // perform post method when currentPort change
     this.currentPort.addShip(this);
+
   }
 }
 

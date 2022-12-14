@@ -2,20 +2,34 @@ const Ship = require('../src/ship');
 const Port = require('../src/port');
 const Itinerary = require('../src/itinerary');
 
+
+describe('Port', () => {
+  let port;
+  let titanic;
+  let queenMary;
+  let ship;
+  describe('with ports and an itinerary', () => {
+    beforeEach( () => {
+      port = new Port('Dover');
+      titanic = {};
+      queenMary = {};
+      ship = {};
+    });
+
 describe('Port constructor', () => {
   it('can be instantiated', () => {
     expect(new Port()).toBeInstanceOf(Object);
   });
   it('check port name', () => {
-    const port = new Port('Dover');
+    // const port = new Port('Dover');
     expect(port.name).toBe('Dover');
   });
 });
 
 describe('addShip', () => {
   it('can add a ship', () => {
-    const port = new Port('Dover');
-    const ship = {};
+    // const port = new Port('Dover');
+    // const ship = {};
     port.addShip(ship);
     expect(port.ships).toContain(ship);
   });
@@ -23,12 +37,15 @@ describe('addShip', () => {
 
 describe('removeShip', () => {
   it('can remove a ship', () => {
-    const port = new Port('Dover');
-    const titanic = {};
-    const queenMary = {};
+    // const port = new Port('Dover');
+    // const titanic = {};
+    // const queenMary = {};
     port.addShip(titanic);
     port.addShip(queenMary);
     port.removeShip(queenMary);
     expect(port.ships).toEqual([titanic]);
   });
+});
+
+});
 });
