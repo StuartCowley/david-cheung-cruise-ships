@@ -1,4 +1,4 @@
-# Project name : Cruise Ships
+# Cruise Ships
 
 ## Purpose:
 To building and working with many objects that allow a cruise ship to operate.
@@ -23,6 +23,7 @@ I want a ship to be able to **set sail from a port**.
 As a cruise ship captain,
 So I can get passengers to a new destination,
 I want a ship to be able to **dock** at a **different port**.
+Renaming startingPort to currentPort because ship can be at different ports.
 
 | Object | Methods | Properties |
 | ----------- | ----------- | ----------- |
@@ -54,7 +55,24 @@ I want a port to **keep track of the ships currently docked**.
 | Itinerary | | ports |
  
 ## Object and functions
+```
+Ship = {
+    currentPort : any port
+    previousPort : any port
+    setSail() : to assign the currentPort to the previousPort and empty currentPort 
+                to removes itself from a previousPort's ships list
+    dock() : to assign currentPort with itinerary 
+}
 
+Port = {
+    ships : a list of ships currently docking in this port
+    addShip() : to add ship to this port
+    removeShip() : to remove ship from this port
+}
 
+Itinerary = {
+    ports : a list of ports which ship will go thru
+}
+```
 ## Project Installation:
 
