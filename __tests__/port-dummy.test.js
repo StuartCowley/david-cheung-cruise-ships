@@ -1,6 +1,4 @@
-const Ship = require('../src/ship');
 const Port = require('../src/port');
-const Itinerary = require('../src/itinerary');
 
 describe('Port', () => {
   let port;
@@ -10,9 +8,10 @@ describe('Port', () => {
   describe('with ports and an itinerary', () => {
     beforeEach( () => {
       port = new Port('Dover');
-      titanic = {};
-      queenMary = {};
-      ship = {};
+      titanic = {};         // set dummy
+      queenMary = {};       // set dummy
+      // ship = {};            // set dummy
+      ship = jest.fn();     // set dummy
     });
 
     describe('Port constructor', () => {
@@ -20,15 +19,12 @@ describe('Port', () => {
         expect(new Port()).toBeInstanceOf(Object);
       });
       it('check port name', () => {
-        // const port = new Port('Dover');
         expect(port.name).toBe('Dover');
       });
     });
 
     describe('addShip', () => {
       it('can add a ship', () => {
-        // const port = new Port('Dover');
-        // const ship = {};
         port.addShip(ship);
         expect(port.ships).toContain(ship);
       });
@@ -36,9 +32,6 @@ describe('Port', () => {
 
     describe('removeShip', () => {
       it('can remove a ship', () => {
-        // const port = new Port('Dover');
-        // const titanic = {};
-        // const queenMary = {};
         port.addShip(titanic);
         port.addShip(queenMary);
         port.removeShip(queenMary);
