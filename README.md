@@ -1,9 +1,9 @@
-## H2 Project name : Cruise Ships
+# Project name : Cruise Ships
 
-## H2 Purpose:
+## Purpose:
 To building and working with many objects that allow a cruise ship to operate.
 
-## H2 User Stories and DOMAIN MODEL:
+## User Stories and DOMAIN MODEL:
 As a cruise ship captain,
 So I can get passengers aboard a **ship**,
 I want a ship to have a **starting port**.
@@ -53,8 +53,8 @@ I want a port to **keep track of the ships currently docked**.
 | | removeShip | |
 | Itinerary | | ports |
  
-## H2 Object and functions
+## Object and functions
 
 
-## H2 Project Installation:
+## Project Installation:
 
