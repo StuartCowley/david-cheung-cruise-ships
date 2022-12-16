@@ -4,10 +4,4 @@ class Itinerary {
         this.ports = portsArray;
     }
 }
-
-// function Itinerary(portsArray){
-//     this.ports = portsArray;
-// }
-
-
 module.exports = Itinerary;

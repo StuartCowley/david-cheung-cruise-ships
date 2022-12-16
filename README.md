@@ -1,6 +1,60 @@
-Exercise: Cruise Ships
+#Project name : Cruise Ships#
 
-Over the next couple of weeks, we are going to cover further aspects of Object-oriented Programming - namely how we pass objects into one another and test for this, how we decide what methods and properties our objects should have, how we isolate objects in tests, and how we test behaviour that's outside of our control.
+##Purpose:##
+To building and working with many objects that allow a cruise ship to operate.
 
-translate these user stories into objects, methods and properties. We call this domain modelling.
+##User Stories and DOMAIN MODEL:##
+As a cruise ship captain,
+So I can get passengers aboard a **ship**,
+I want a ship to have a **starting port**.
+
+| Object | Methods | Properties |
+| ----------- | ----------- | ----------- |
+| Ship | | startingPort |
+
+As a cruise ship captain,
+So I can get passengers started on their journey,
+I want a ship to be able to **set sail from a port**.
+
+| Object | Methods | Properties |
+| ----------- | ----------- | ----------- |
+| Ship | setSail | startingPort |
+
+As a cruise ship captain,
+So I can get passengers to a new destination,
+I want a ship to be able to **dock** at a **different port**.
+
+| Object | Methods | Properties |
+| ----------- | ----------- | ----------- |
+| Ship | setSail | currentPort |
+|      | dock    |              |
+| Port | | |
+
+As a tour representative,
+So I can decide which destinations passengers visit,
+I want a ship to take an **itinerary** which determines at which port it **next docks**.
+
+| Object | Methods | Properties |
+| ----------- | ----------- | ----------- |
+| Ship | setSail | currentPort |
+| | dock | |
+| Port | | |
+| Itinerary | | ports |
+
+As a port operations manager,
+So I can best utilise a port,
+I want a port to **keep track of the ships currently docked**.
+
+| Object | Methods | Properties |
+| ----------- | ----------- | ----------- |
+| Ship | setSail | currentPort |
+| | dock | |
+| Port | addShip | |
+| | removeShip | |
+| Itinerary | | ports |
+ 
+##Object and functions##
+
+
+##Project Installation:##
 
