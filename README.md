@@ -75,8 +75,13 @@ Itinerary = {
 }
 ```
 ## Project Installation:
-Sequence of creating objects:
-1. Instantiate ports object
-2. Instantiate itineraries object
-3. Instantiate ships object
-
+```
+$ git clone https://github.com/DavidCheungTW/cruise-ships
+$ cd cruise-ships
+$ npm install
+```
+## Unit Test:
+```
+$ cd __tests__
+$ npm test
+```
