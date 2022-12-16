@@ -54,7 +54,7 @@ I want a port to **keep track of the ships currently docked**.
 | | removeShip | |
 | Itinerary | | ports |
  
-## Object and functions
+## Object functions and properties
 ```
 Ship = {
     currentPort : any port
@@ -75,4 +75,8 @@ Itinerary = {
 }
 ```
 ## Project Installation:
+Sequence of creating objects:
+1. Instantiate ports object
+2. Instantiate itineraries object
+3. Instantiate ships object
 
